@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #F3F5F2;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sudoku.HelloController">
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #F3F5F2;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sudoku.HelloController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -34,21 +34,7 @@
                               <Font size="11.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lblTiempo" style="-fx-text-fill: #234536; -fx-font-weight: bold;" text="Segundo">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-                  <VBox alignment="CENTER_LEFT" layoutX="390.0" layoutY="10.0" prefHeight="70.0" prefWidth="200.0" spacing="4.0" style="-fx-padding: 12; -fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-border-color: #E1E8E1; -fx-border-radius: 12;">
-                     <children>
-                        <Label style="-fx-font-weight: bold; -fx-text-fill: #6D7E73;" text="Errores">
-                           <font>
-                              <Font size="11.0" />
-                           </font>
-                        </Label>
-                        <Label style="-fx-text-fill: #234536; -fx-font-weight: bold;" text="0/3">
+                        <Label fx:id="lblTiempo" style="-fx-text-fill: #234536; -fx-font-weight: bold;" text="0">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -71,7 +57,7 @@
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <GridPane alignment="CENTER" focusTraversable="true" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #234536; -fx-border-width: 2;">
+                        <GridPane fx:id="gridTablero" alignment="CENTER" focusTraversable="true" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #234536; -fx-border-width: 2;">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -157,32 +143,32 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="65.0" style="-fx-font-weight: bold; -fx-text-fill: #234536; -fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: transparent; -fx-font-size: 20;" text="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Button mnemonicParsing="false" onAction="#handleNumero" prefHeight="60.0" prefWidth="65.0" style="-fx-font-weight: bold; -fx-text-fill: #234536; -fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: transparent; -fx-font-size: 20;" text="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="65.0" style="-fx-font-weight: bold; -fx-text-fill: #234536; -fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: transparent; -fx-font-size: 20;" text="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button mnemonicParsing="false" onAction="#handleNumero" prefHeight="60.0" prefWidth="65.0" style="-fx-font-weight: bold; -fx-text-fill: #234536; -fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: transparent; -fx-font-size: 20;" text="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="65.0" style="-fx-font-weight: bold; -fx-text-fill: #234536; -fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: transparent; -fx-font-size: 20;" text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Button mnemonicParsing="false" onAction="#handleNumero" prefHeight="60.0" prefWidth="65.0" style="-fx-font-weight: bold; -fx-text-fill: #234536; -fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: transparent; -fx-font-size: 20;" text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="65.0" style="-fx-font-weight: bold; -fx-text-fill: #234536; -fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: transparent; -fx-font-size: 20;" text="5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button mnemonicParsing="false" onAction="#handleNumero" prefHeight="60.0" prefWidth="65.0" style="-fx-font-weight: bold; -fx-text-fill: #234536; -fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: transparent; -fx-font-size: 20;" text="5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="65.0" style="-fx-font-weight: bold; -fx-text-fill: #234536; -fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: transparent; -fx-font-size: 20;" text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Button mnemonicParsing="false" onAction="#handleNumero" prefHeight="60.0" prefWidth="65.0" style="-fx-font-weight: bold; -fx-text-fill: #234536; -fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: transparent; -fx-font-size: 20;" text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="65.0" style="-fx-font-weight: bold; -fx-text-fill: #234536; -fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: transparent; -fx-font-size: 20;" text="6" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button mnemonicParsing="false" onAction="#handleNumero" prefHeight="60.0" prefWidth="65.0" style="-fx-font-weight: bold; -fx-text-fill: #234536; -fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: transparent; -fx-font-size: 20;" text="6" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -193,17 +179,17 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="150.0" prefWidth="240.0" spacing="8.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="220.0" style="-fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: #D5DED7; -fx-border-radius: 10; -fx-border-width: 1;" text="Borrar" textFill="#234536">
+                              <Button mnemonicParsing="false" onAction="#handleBorrar" prefHeight="32.0" prefWidth="220.0" style="-fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: #D5DED7; -fx-border-radius: 10; -fx-border-width: 1;" text="Borrar" textFill="#234536">
                                  <font>
                                     <Font size="13.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="19.0" layoutY="10.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="220.0" style="-fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: #D5DED7; -fx-border-radius: 10; -fx-border-width: 1;" text="Deshacer" textFill="#234536">
+                              <Button layoutX="19.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleDeshacer" prefHeight="32.0" prefWidth="220.0" style="-fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: #D5DED7; -fx-border-radius: 10; -fx-border-width: 1;" text="Deshacer" textFill="#234536">
                                  <font>
                                     <Font size="13.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="19.0" layoutY="68.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="220.0" style="-fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: #D5DED7; -fx-border-radius: 10; -fx-border-width: 1;" text="Pista" textFill="#234536">
+                              <Button fx:id="btnPista" layoutX="19.0" layoutY="68.0" mnemonicParsing="false" onAction="#handlePista" prefHeight="32.0" prefWidth="220.0" style="-fx-background-color: #E8F0E9; -fx-background-radius: 10; -fx-border-color: #D5DED7; -fx-border-radius: 10; -fx-border-width: 1;" text="Pista" textFill="#234536">
                                  <font>
                                     <Font size="13.0" />
                                  </font>
