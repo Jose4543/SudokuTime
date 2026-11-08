@@ -5,5 +5,5 @@ module org.example.sudoku {
 
     opens org.example.sudoku to javafx.fxml;
     exports org.example.sudoku;
-    org.example.sudoku.model;
+    exports org.example.sudoku.model;
 }
